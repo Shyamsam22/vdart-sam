@@ -1,0 +1,497 @@
+!DOCTYPE html>
+<html>
+<head>
+<style>
+body @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+box-sizing: border-box;
+color: white;
+font-family: "Raleway", sans-serif;
+}
+
+body {
+margin: 0;
+padding: 0;
+}
+
+.custom-link {
+cursor: pointer;
+text-decoration: none;
+}
+
+.section {
+min-height: 100vh;
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+padding-top: 45px;
+text-align: center;
+background-image: none;
+
+}
+
+.section-title {
+font-size: 50px;
+margin: 0;
+
+}
+
+/* HEADER */
+#header {
+background: linear-gradient(to bottom, #0c0c0c, #b7b6c2);
+position: fixed;
+left: 0;
+right: 0;
+top: 0;
+}
+
+#navbar {
+height: 75px;
+}
+
+#navbar-links-list {
+display: flex;
+flex-direction: row;
+justify-content: end;
+list-style-type: none;
+margin: 10;
+height: 100%;
+width: 100%;
+}
+
+.navbar-link {
+font-size: 25px;
+height: 100%;
+}
+
+.header-link {
+display: inline-flex;
+align-items: center;
+font-family: "Poppins", sans-serif;
+height: 100%;
+padding: 0 50px;
+position: relative;
+}
+
+.header-link:hover {
+background: linear-gradient(to bottom, #45567d, #12234a);
+}
+
+/* WELCOME SECTION */
+#welcome-section {
+background-image: url("https://img.freepik.com/premium-photo/laptop-computer-sits-top-wooden-desk-providing-workspace-productivity-technology-desk-overlooking-window-with-cityscape-view-ai-generated_538213-42393.jpg?size=626&ext=jpg&ga=GA1.1.1461343591.1713012685&semt=ais");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 200px;
+  width: 100%;
+  background-size: cover;
+  background-attachment: scroll;
+}
+}
+
+#main-title {
+cursor: default;
+font-family: "Raleway", sans-serif;
+font-size: 75px;
+font-weight: 700;
+line-height: 84px;
+margin: 25px;
+}
+
+#main-title:hover {
+animation: 0.2s textShadow;
+animation-fill-mode: forwards;
+}
+
+#welcome-section-subtitle {
+color: #be3144;
+cursor: default;
+font-family: "Poppins", sans-serif;
+font-size: 25px;
+font-style: italic;
+font-weight: 300;
+margin: 0;
+}
+
+#welcome-section-subtitle:hover {
+animation: 0.2s mainSubtitle;
+animation-fill-mode: forwards;
+}
+
+/* PROJECTS SECTION */
+#projects {
+background: linear-gradient(-45deg, #45567d, #12234a);
+}
+
+#projects-title {
+border-bottom: 2px white solid;
+margin-top: 4vw;
+padding: 25px 50px;
+max-width: 90%;
+}
+
+.project-tile {
+display: grid;
+grid-template-columns: 40% 40%;
+justify-content: center;
+column-gap: 5vw;
+row-gap: 5vw;
+padding: 5vw 0;
+width: 100%;
+}
+
+.project-card {
+border: 4px #303841 solid;
+border-radius: 15px;
+min-height: 375px;
+min-width: 375px;
+overflow: hidden;
+}
+
+.project-card-img {
+height: 25vh;
+min-height: 300px;
+object-fit: cover;
+width: 100%;
+}
+
+.project-name {
+background-color: #303841;
+font-family: "Poppins", sans-serif;
+font-size: 27px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.project-name span {
+color: #be3144;
+font-family: "Raleway", sans-serif;
+font-size: 30px;
+font-weight: 800;
+margin: 0 15px;
+opacity: 0;
+}
+
+.project-card:hover {
+animation: 0.4s borderColor;
+animation-fill-mode: forwards;
+cursor: pointer;
+}
+
+.project-card:hover .project-name span {
+animation: 0.4s fadeIn;
+animation-fill-mode: forwards;
+}
+
+#projects-button {
+background-color: #303841;
+border: 4px #303841 solid;
+border-radius: 10px;
+cursor: pointer;
+font-family: "Poppins", sans-serif;
+font-size: 20px;
+padding: 10px 30px;
+margin-bottom: 5vw;
+}
+
+#projects-button:hover {
+animation: 0.4s backgroundColor;
+animation-fill-mode: forwards;
+}
+
+#projects-button i {
+margin-left: 7px;
+}
+
+#projects-button:hover i {
+transform: translateX(10px);
+transition: transform 0.4s ease-out;
+}
+
+/* CONTACT SECTION */
+#contact {
+background: linear-gradient(to bottom, #303841, #101620);
+display: flex;
+flex-direction: column;
+min-height: calc(100vh - 85px - 75px);
+}
+
+#contact-subtitle {
+color: #56678e;
+font-family: "Poppins", sans-serif;
+font-size: 22px;
+font-style: italic;
+font-weight: 500;
+}
+
+#contact-links-list {
+display: flex;
+flex-direction: row;
+
+margin-top: 7.5vh;
+width: 90%;
+}
+
+.contact-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: "Poppins", sans-serif;
+font-size: 2.25vw;
+line-height: 35px;
+outline: none;
+padding: 50px 0;
+text-shadow: rgb(15, 15, 15) 6px 6px 3px;
+width: 20%;
+}
+
+.contact-btn * {
+margin: 0 5px;
+}
+
+.contact-btn:hover {
+transform: translateY(-20px);
+transition: transform 0.3s ease-in-out;
+}
+
+.contact-btn:hover span {
+font-weight: 800;
+}
+
+.contact-btn:hover * {
+color: #be3144;
+}
+
+/* FOOTER */
+#footer {
+background-color: #101620;
+border-top: 5px #be3144 solid;
+display: flex;
+font-family: "Poppins", sans-serif;
+font-weight: 300;
+font-size: 20px;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+height: 85px;
+padding: 0 5%;
+}
+
+#footer p {
+display: flex;
+height: 100%;
+align-items: center;
+}
+
+#asterisco {
+font-size: 45px;
+position: relative;
+top: 7px;
+}
+
+.fcc-link:hover .fcc-text {
+color: #be3144;
+}
+.fcc-link:hover .logo-icon {
+color: #be3144;
+}
+
+.fcc-link * {
+color: #45567d;
+font-style: italic;
+font-weight: 500;
+}
+
+.logo-icon {
+font-size: 25px;
+position: relative;
+top: 4px;
+}
+
+@media (max-width: 850px) {
+.header-link {
+justify-content: center;
+width: calc(100vw / 3);
+}
+
+.section-title {
+font-size: 45px;
+margin: 0;
+}
+
+#projects-title {
+border-bottom: 2px white solid;
+margin: 2vw 10% 0;
+}
+
+.project-tile {
+grid-template-columns: 65%;
+}
+
+.project-name span {
+margin: 0 20px;
+}
+
+#contact {
+justify-content: space-evenly;
+padding: 25px 0;
+}
+
+#contact-links-list {
+flex-direction: column;
+align-items: center;
+margin-top: 0;
+}
+
+.contact-btn {
+font-size: 35px;
+margin: 0;
+padding: 20px 0;
+width: 75%;
+}
+
+.contact-btn:hover {
+transform: translateY(-10px);
+}
+
+#footer {
+flex-direction: column;
+align-items: center;
+height: 100%;
+padding: 10px 0;
+}
+
+#footer p {
+height: 0;
+}
+}
+
+@keyframes fadeIn {
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+@keyframes borderColor {
+0% {
+border-color: #303841;
+}
+100% {
+border-color: #be3144;
+}
+}
+
+@keyframes backgroundColor {
+0% {
+background-color: #303841;
+}
+100% {
+background-color: #be3144;
+}
+}
+
+@keyframes textShadow {
+0% {
+text-shadow: transparent 1px 1px 0.5px;
+}
+100% {
+text-shadow: #be3144 5px 5px 2.5px;
+}
+}
+
+@keyframes mainSubtitle {
+0% {
+color: #be3144;
+font-weight: 300;
+}
+100% {
+color: #56678e;
+font-weight: 500;
+}
+}
+
+</style>
+</head>
+<body>
+
+<header id="header">
+<nav id="navbar">
+<ul id="navbar-links-list">
+  <h1>Mr.</h1>
+  <h1>VDart..</h1>
+<li class="navbar-link"><a href="https://www.vdart.com/" class="header-link custom-link">About</a></li>
+<li class="navbar-link"><a href="https://www.siddahmed.com/" class="header-link custom-link">CEO</a></li>
+<li class="navbar-link"><a href="https://www.vdart.com/contact-us/" class="header-link custom-link">Contact</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section id="welcome-section" class="section">
+<h1 id="main-title">Hey! Welcome To VDart World</h1>
+<p id="welcome-section-subtitle">Let's start</p>
+</section>
+<section id="projects" class="section">
+<h2 id="projects-title" class="section-title">These are my <i>Success</i> story</h2>
+<div class="project-tile">
+<a class="project-link custom-link" href="https://www.vdart.com/what-we-do" target="_blank">
+<div class="project-card"><img class="project-card-img" src="https://img.freepik.com/premium-photo/big-data-analytics-business-intelligence-concept-with-chart-graph-icons-digital-screen-interface-businessman-background_265022-12715.jpg?size=626&ext=jpg&ga=GA1.1.1461343591.1713012685&semt=ais" />
+<div class="project-name">
+<p><span class="name-decoration">&#8826;</span>Digital business consulting services to drive business value | VDart<span class="name-decoration">&#8725;&#8827;</span></p>
+</div>
+</div>
+</a>
+<a class="project-link custom-link" href="https://www.vdart.com/what-we-do/media/vdart-celebrates-five-consecutive-wins-receives-national-supplier-of-the-year-class-iv-award-from-nmsdc" target="_blank">
+<div class="project-card"><img class="project-card-img" src="https://img.freepik.com/free-photo/standard-quality-control-concept-m_23-2150041866.jpg?size=626&ext=jpg&ga=GA1.1.1461343591.1713012685&semt=ais" />
+<div class="project-name">
+<p><span class="name-decoration">&#8826;</span>Digital business consulting services to drive business value | VDart<span class="name-decoration">&#8725;&#8827;</span></p>
+</div>
+</div>
+</a>
+<a class="project-link custom-link" href="https://mbntexas.biz/vdart-earns-toyotas-it-services-diverse-supplier-of-the-year-again-p1137-231.htm" target="_blank">
+<div class="project-card"><img class="project-card-img" src="https://ww1.prweb.com/prfiles/2021/07/12/18057148/gI_225126_NewsImage_vcsPRAsset_3611216_225126_3363a7b9-12e4-45d0-91e8-152e5b6b996d_0.png" alt="Landing Page Project Thumbnail" />
+<div class="project-name">
+<p><span class="name-decoration">&#8826;</span>VDart earns Toyotas IT Services Diverse Supplier of the Year  again<span class="name-decoration">&#8725;&#8827;</span></p>
+</div>
+</div>
+</a>
+<a class="project-link custom-link" href="https://www.siddahmed.com/about/" target="_blank">
+<div class="project-card"><img class="project-card-img" src="https://kg.diffbot.com/image/api/get?fetch=yes&url=g%3Cj7P0Stn8p.%5DjEp9G.Bd%7BkE5rRL1%2Fx-Cx8X-Zj7N-C3Rj-i%5BHTs%5COPR3%2F1zN_%3Cb4E.A%5Dm" />
+<div class="project-name">
+<p><span class="name-decoration">&#8826;</span>Who is S A?<span class="name-decoration">&#8725;&#8827;</span></p>
+</div>
+</div>
+</a>
+</div>
+<div id="projects-button"><a href="https://codepen.io/patugarte/pens/public" target="_blank" class="custom-link">Show all<i class="fas fa-chevron-right"></i></a></div>
+</section>
+<section id="contact" class="section">
+<div>
+<h2 class="section-title">Let's work together...</h2>
+<p id="contact-subtitle">How do you take your coffee?</p>
+</div>
+<div id="contact-links-list">
+<a href="https://in.linkedin.com/company/vdart" target="_blank" class="contact-btn custom-link"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+<a href="https://codepen.io/patugarte" target="_blank" class="contact-btn custom-link"><i class="Instagram"></i><span>Instagram</a>
+<a href="www.facebook.com/VDartIndia/" target="_blank" class="contact-btn custom-link"><i class="Facebook"></i><span>Facebook</span></a>
+<a href="twitter.com/VDartInc" target="_blank" class="contact-btn custom-link"><i class="fas fa-at"></i><span>X
+</span></a>
+<a href="tel:555-555-5555" target="_blank" class="contact-btn custom-link"><i class="fas fa-mobile-alt"></i><span>Call
+me</span></a>
+</div>
+</section>
+</main>
+<footer id="footer"><h1>
+<p><span id="asterisco">*</span>coming soon.</p></h1>
+<p>
+&nbsp;<span class="fcc-link"><a href="www.vdart.com/careers/" target="_blank" class="fcc-text">careers<i class="careers"></i></a></span>
+</span>
+</footer>
+
+</body>
+</html>
